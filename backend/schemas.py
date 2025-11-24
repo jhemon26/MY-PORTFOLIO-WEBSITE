@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 class ProjectBase(BaseModel):
     title: str
-    description: str
+    description: str | None = None
     github: str | None = None
     live_url: str | None = None
     image_url: str | None = None
@@ -14,4 +14,4 @@ class ProjectResponse(ProjectBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

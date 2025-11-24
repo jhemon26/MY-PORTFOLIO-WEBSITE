@@ -1,0 +1,4 @@
+git add .gitignore
+git rm --cached backend/.env
+git commit -m "Remove env file from repo"
+git push

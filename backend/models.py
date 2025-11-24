@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from backend import db, models, crud, schemas
-
+from backend.db import Base
 
 class Project(Base):
     __tablename__ = "projects"

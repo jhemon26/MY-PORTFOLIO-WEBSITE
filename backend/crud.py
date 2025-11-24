@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
-from backend import db, models, crud, schemas
-
+from backend import models, schemas
 
 def get_projects(db: Session):
     return db.query(models.Project).all()

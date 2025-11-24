@@ -1,4 +1,4 @@
-const backendURL = "https://my-portfolio-website-tip4.onrender.com";
+const BACKEND_URL = "https://my-portfolio-website-tip4.onrender.com";
 
 async function loadProjects() {
     const container = document.getElementById("projects-container");
@@ -38,4 +38,3 @@ async function loadProjects() {
 }
 
 loadProjects();
-

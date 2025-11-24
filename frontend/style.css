@@ -1,23 +1,58 @@
 body {
+    margin: 0;
+    padding: 0;
+    background: #000;
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background: #fafafa;
+    color: #fff;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 40px 0;
+}
+
+.glow-text h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow:
+        0 0 10px #ff0044,
+        0 0 20px #ff0044,
+        0 0 40px #00e5ff;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+section {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.coming-soon {
+    color: #ff0066;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0066;
+}
+
+.projects h2 {
+    margin-bottom: 20px;
 }
 
 .project-card {
-    background: white;
+    background: #111;
     padding: 20px;
     margin-bottom: 20px;
+    border: 1px solid #222;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px #00e5ff;
 }
 
 .project-card a {
-    color: blue;
-    text-decoration: none;
+    color: #00eaff;
 }

@@ -1,28 +1,37 @@
-const API_URL = "https://my-portfolio-website-tip4.onrender.com";
+const backendURL = "https://my-portfolio-website-tip4.onrender.com";
 
 async function loadProjects() {
-    const res = await fetch(`${API_URL}/projects`);
-    const projects = await res.json();
+    const container = document.getElementById("projects-container");
 
-    const container = document.getElementById("projects");
-    container.innerHTML = "";
+    try {
+        const response = await fetch(`${backendURL}/projects`);
+        if (!response.ok) throw new Error("Backend error");
 
-    projects.forEach(p => {
-        const card = document.createElement("div");
-        card.className = "project-card";
+        const projects = await response.json();
+        container.innerHTML = "";
 
-        card.innerHTML = `
-            <h2>${p.title}</h2>
-            <p>${p.description}</p>
-            <p>
-                <a href="${p.github}" target="_blank">GitHub</a> | 
+        if (projects.length === 0) {
+            container.innerHTML = "<p>No projects added yet.</p>";
+            return;
+        }
+
+        projects.forEach(p => {
+            const div = document.createElement("div");
+            div.classList.add("project-card");
+
+            div.innerHTML = `
+                <h3>${p.title}</h3>
+                <p>${p.description}</p>
+                <a href="${p.github}" target="_blank">GitHub</a> |
                 <a href="${p.live_url}" target="_blank">Live Demo</a>
-            </p>
-            <img src="${p.image_url}" width="300">
-        `;
+            `;
 
-        container.appendChild(card);
-    });
+            container.appendChild(div);
+        });
+
+    } catch (err) {
+        container.innerHTML = `<p style="color:red;">⚠ Backend Offline or Not Reachable</p>`;
+    }
 }
 
 loadProjects();

@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Jahid Hasan | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- JS -->
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <h1>My Portfolio</h1>
-    <p>Backend-connected portfolio showing real database projects</p>
-</header>
+    <header class="glow-text">
+        <h1>Jahid Hasan</h1>
+        <p>Full-Stack Developer • Python • FastAPI • PostgreSQL</p>
+    </header>
 
-<section id="projects"></section>
+    <section class="about">
+        <h2>About Myself</h2>
+        <p>
+            Hi, I’m Jahid — a passionate software engineering student focused on full-stack development,
+            backend engineering, databases, cloud technologies, and real-world systems.
+        </p>
+        <p class="coming-soon">✨ Major updates coming soon ✨</p>
+    </section>
 
-<script src="script.js"></script>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div id="projects-container" class="project-list">Loading...</div>
+    </section>
+
 </body>
 </html>

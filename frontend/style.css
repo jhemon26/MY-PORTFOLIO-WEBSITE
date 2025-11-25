@@ -1,9 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: #000;
+    background: #143639;
     font-family: Arial, sans-serif;
-    color: #fff;
+    color: #f7f7f7;
 }
 
 h1, h2 {
@@ -17,11 +17,11 @@ header {
 
 .glow-text h1 {
     font-size: 3rem;
-    color: #fff;
+    color: #372d47;
     text-shadow:
-        0 0 10px #ff0044,
-        0 0 20px #ff0044,
-        0 0 40px #00e5ff;
+        0 0 10px #4392b3,
+        0 0 20px #512977,
+        0 0 40px #2b6970;
 }
 
 p {
@@ -35,7 +35,7 @@ section {
 }
 
 .coming-soon {
-    color: #ff0066;
+    color: #5380bb;
     font-weight: bold;
     text-shadow: 0 0 10px #ff0066;
 }
@@ -55,4 +55,26 @@ section {
 
 .project-card a {
     color: #00eaff;
+}
+
+/* FULL SCREEN BACKGROUND IMAGE */
+body {
+    background: url('webimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Optional: dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
 }

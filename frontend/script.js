@@ -39,4 +39,28 @@ async function loadProjects() {
     }
 }
 
+/* Enable touch animations for mobile (tap = hover effect) */
+function enableTouchHover(selector) {
+    const elements = document.querySelectorAll(selector);
+
+    elements.forEach(el => {
+        el.addEventListener("touchstart", () => {
+            el.classList.add("touch-hover");
+        });
+
+        el.addEventListener("touchend", () => {
+            el.classList.remove("touch-hover");
+        });
+    });
+}
+
+/* Apply to all interactive elements */
+document.addEventListener("DOMContentLoaded", () => {
+    enableTouchHover(".animated-name");
+    enableTouchHover(".blended-pic");
+    enableTouchHover(".skill-unit");
+    enableTouchHover(".project-card");
+    enableTouchHover(".contact-item");
+});
+
 loadProjects();

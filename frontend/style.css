@@ -364,4 +364,12 @@ body::before {
         gap: 10px;
     }
 }
+/* Mobile tap = same as hover */
+.touch-hover,
+.touch-hover * {
+    transform: scale(1.12) !important;
+    text-shadow: 0 0 20px #00eaff !important;
+    filter: drop-shadow(0 0 12px #00eaff) !important;
+    box-shadow: 0 0 22px #00eaff !important;
+}
 

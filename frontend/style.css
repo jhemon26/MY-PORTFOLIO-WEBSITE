@@ -277,3 +277,91 @@ body::before {
     color: #74f2ff;
     text-shadow: 0 0 10px #00eaff;
 }
+
+/* -------------------------------------- */
+/*          MOBILE RESPONSIVE FIXES       */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Reduce profile picture slightly */
+    .blended-pic {
+        width: 140px;
+        height: 140px;
+        transform: none !important; /* prevent overscale issues */
+    }
+
+    /* Adjust hero name */
+    .animated-name {
+        font-size: 2rem;
+        text-shadow: 
+            0 0 6px #00eaff,
+            0 0 12px #0099ff;
+    }
+
+    .animated-name:hover {
+        transform: scale(1.04);
+        text-shadow:
+            0 0 10px #00eaff,
+            0 0 22px #00c8ff,
+            0 0 40px #0088ff;
+    }
+
+    /* Subtitle smaller */
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Fix skill-line overflowing */
+    .skills-line {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .skill-unit {
+        transform: none;
+        padding: 4px 8px;
+    }
+
+    /* Section box padding smaller */
+    .glass-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Project cards smaller */
+    .project-card {
+        padding: 15px;
+        transform: none;
+    }
+
+    .project-card:hover {
+        transform: scale(1.03);
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+    }
+
+    /* Contact text */
+    .contact-section p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Ultra-small screens (phones < 400px) */
+@media (max-width: 400px) {
+    .animated-name {
+        font-size: 1.7rem;
+    }
+
+    .blended-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills-line {
+        gap: 10px;
+    }
+}
+

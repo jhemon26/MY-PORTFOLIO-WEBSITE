@@ -6,38 +6,36 @@ async function loadProjects() {
 
     try {
         const response = await fetch(`${backendURL}/projects`);
-        
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-
         const projects = await response.json();
 
-        container.innerHTML = "";
-
-        if (projects.length === 0) {
+        if (!projects.length) {
             container.innerHTML = "No projects added yet.";
             return;
         }
 
+        container.innerHTML = "";
+
         projects.forEach(project => {
             container.innerHTML += `
                 <div class="project-card">
-                    <img src="${project.image_url}" alt="${project.title} project image" class="project-image">
+                    ${
+                        project.image_url
+                        ? `<img src="${project.image_url}" class="project-image" alt="">`
+                        : ""
+                    }
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>
 
                     <div class="project-links">
-                        <a href="${project.github}" target="_blank">GitHub</a>
+                        <a href="${project.github}" target="_blank">GitHub</a><br>
                         <a href="${project.live_url}" target="_blank">Live Demo</a>
                     </div>
                 </div>
             `;
         });
 
-    } catch (error) {
-        container.innerHTML = "⚠ Cannot load projects (Backend Offline)";
-        console.error(error);
+    } catch (err) {
+        container.innerHTML = "⚠ Backend Offline";
     }
 }
 

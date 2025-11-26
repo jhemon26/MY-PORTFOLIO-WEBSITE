@@ -5,33 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jahid Hasan | Portfolio</title>
 
-    <!-- CSS -->
+    <!-- CSS link -->
     <link rel="stylesheet" href="./style.css">
 
-    <!-- JS -->
+    <!-- JS link -->
     <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-    <header class="glow-text">
-        <h1>Jahid Emon</h1>
-        <p>Full-Stack Developer • Python • FastAPI • PostgreSQL</p>
-    </header>
+    <!-- Upper name section -->
+    <section class="hero">
 
-    <section class="about">
-        <h2>About Myself</h2>
+
+  <h1 class="animated-name">Jahid Emon</h1>
+
+    
+
+    <div class="skills-line">
+
+    <div class="skill-unit">
+        <span>Python</span>
+        <img src="assets/icons8-python-50.png" class="skill-icon" alt="Python">
+    </div>
+
+    <div class="skill-unit">
+        <span>Scheme</span>
+        <img src="assets/icons8-lambda-50.png" class="skill-icon" alt="Scheme">
+    </div>
+
+    <div class="skill-unit">
+        <span>FastAPI</span>
+        <img src="assets/icons8-rest-api-64.png" class="skill-icon" alt="FastAPI">
+    </div>
+
+    <div class="skill-unit">
+        <span>Backend Dev</span>
+        <img src="assets/icons8-developer-64 (1).png" class="skill-icon" alt="Backend Dev">
+    </div>
+
+    <div class="skill-unit">
+        <span>PostgreSQL</span>
+        <img src="assets/icons8-sql-26.png" class="skill-icon" alt="PostgreSQL">
+    </div>
+
+    </div>
+
+
+
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="glass-section hover-animate">
+        <h2 class="section-title">About Myself</h2>
         <p>
-            Hi, I’m Jahid — a passionate software engineering student focused on full-stack development,
+            Hi, I’m Emon — a passionate software engineering student based in London. Focused on full-stack development,
             backend engineering, databases, cloud technologies, and real-world systems.
         </p>
-        <p class="coming-soon">✨ Major updates coming soon ✨</p>
+        <p class="coming-soon">✨ University Of Greenwich, Second Year ✨</p>
     </section>
 
-    <section class="projects">
-        <h2>My Projects</h2>
-        <div id="projects-container" class="project-list">Loading...</div>
+    <!-- EXPERIENCE -->
+    <section class="glass-section hover-animate">
+        <h2 class="section-title">Experience</h2>
+        <p>Intermediate experience in:</p>
+        <ul>
+            <li>Python [Main]</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>C Programming</li>
+            <li>PostgreSQL</li>
+            <li>Git & GitHub</li>
+            <li>Bash Scripting</li>
+            <li>Scheme</li>
+            <li>Flex & Bison</li>
+            <li>OOP</li>
+            <li>FastAPI</li>
+            <li>Advanced Algorithms</li>
+        </ul>
     </section>
-    <sec
+
+    <!-- PROJECTS -->
+<section class="glass-section hover-animate" id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-grid">
+
+        <!-- Project 1: Family Tree (Python) -->
+        <div class="project-card">
+            <h3>Family Tree System (Python)</h3>
+            <p class="project-desc">
+                A genealogy tracking system to store family member details, search relatives,
+                match birthdays/death dates, and explore immediate & extended family connections.
+            </p>
+            <a href="https://github.com/jhemon26/COMP1811_Family_tree_project-Python-" target="_blank">GitHub →</a>
+        </div>
+
+        <!-- Project 2: Family Tree (Scheme) -->
+        <div class="project-card">
+            <h3>Family Tree System (Scheme)</h3>
+            <p class="project-desc">
+                Functional-programming version of the family tree system built in Scheme,  
+                featuring recursive relationship search, date filtering, and ancestry analysis.
+            </p>
+            <a href="https://github.com/jhemon26/COMP1811_Scheme_Family-Tree-Project" target="_blank">GitHub →</a>
+        </div>
+
+        <!-- Project 3: Boolean Calculator -->
+        <div class="project-card">
+            <h3>Boolean Calculator — C, Flex & Bison</h3>
+            <p class="project-desc">
+                A compiler-style boolean expression calculator using tokenization, parsing,
+                and evaluation with Flex & Bison. Supports custom operators and expressions.
+            </p>
+            <a href="https://github.com/jhemon26/Boolean-Calculator-using-Bison-and-Flex" target="_blank">GitHub →</a>
+        </div>
+
+        <!-- Project 4: Handwritten Digit Recognition AI -->
+        <div class="project-card">
+            <h3>Handwritten Digit Recognition AI</h3>
+            <p class="project-desc">
+                A CNN-based machine learning model trained on a custom dataset to recognize
+                handwritten digits with high accuracy. Built using Python & deep learning tools.
+            </p>
+            <a href="https://github.com/jhemon26/COMP-1827-Handwritten-Digit-Recognition-AI" target="_blank">GitHub →</a>
+        </div>
+
+        <!-- Project 5: Real-Time Journey Planner -->
+        <div class="project-card">
+            <h3>London Underground Journey Planner</h3>
+            <p class="project-desc">
+                A real-time route planning system using London Underground station data,
+                providing optimized journeys similar to Google Maps pathfinding.
+            </p>
+            <a href="https://github.com/jhemon26/Designing-developing-and-testing-solutions-for-the-London-Underground-system" target="_blank">GitHub →</a>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- CONTACT -->
+<section class="glass-section hover-animate" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-info">
+
+        <div class="contact-line">
+            <span>Email:</span>
+            <a href="mailto:extrause32@gmail.com">extrause32@gmail.com</a>
+        </div>
+
+        <div class="contact-line">
+            <span>GitHub:</span>
+            <a href="https://github.com/jhemon26" target="_blank">github.com/jhemon26</a>
+        </div>
+
+        <div class="contact-line">
+            <span>LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/jahid-hasan-emon-431699350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Jahid Hasan Emon</a>
+        </div>
+
+    </div>
+</section>
+
+
+    </section>
+
 
 </body>
 </html>
+

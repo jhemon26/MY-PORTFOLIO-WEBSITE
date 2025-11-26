@@ -310,5 +310,48 @@ body::before {
         text-shadow: 0 0 12px #00eaff !important;
     }
 }
+/* -------------------------------------- */
+/*       MOBILE FIX — PREVENT HUGE ZOOM   */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Prevent project cards from zooming too big */
+    .project-card:hover {
+        transform: scale(1.01) !important;
+        box-shadow: 0 0 8px #00eaff !important;
+    }
+
+    /* Slightly smaller, controlled card styling */
+    .project-card {
+        padding: 15px !important;
+        background: rgba(25, 30, 45, 0.28) !important;
+        box-shadow: 0 0 8px rgba(0,200,255,0.15) !important;
+    }
+
+    /* Fix the special touch-hover glow so it's not huge */
+    .touch-hover,
+    .touch-hover * {
+        transform: scale(1.02) !important;   /* small bump, not huge */
+        box-shadow: 0 0 10px #00eaff !important;
+        text-shadow: 0 0 6px #00eaff !important;
+        filter: drop-shadow(0 0 6px #00eaff) !important;
+    }
+
+    /* Prevent layout shifting on tap */
+    .project-card,
+    .glass-section,
+    .skill-unit,
+    .contact-line {
+        transform-origin: center !important;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 400px) {
+    .project-card {
+        padding: 12px !important;
+    }
+}
 
 
